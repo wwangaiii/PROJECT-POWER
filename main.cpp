@@ -6,14 +6,13 @@
 using namespace std;
 int main()
 {
-   struct fixtures;
-    {
-        string teams;
-        string stadium;
-        string town;
-        string day;
-
-    }
+   struct Fixtures{
+   string Team;
+   string Stadium;
+   string Weekend;
+   string day;
+   }
+   
     //reading csv file(geeksforgeeks)
     void create();
     {
