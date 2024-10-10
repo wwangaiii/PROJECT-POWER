@@ -25,6 +25,18 @@ struct Match{ // structure of how the fixtures are going to be
 
 
 
+ while (getline(file, line)) {
+        stringstream ss(line);
+        Team team;
+        getline(ss, team.name, ',');
+        getline(ss, team.town, ',');
+        getline(ss, team.stadium);
+        teams.push_back(team);
+    }
+
+void generateFixtures(const vector<Team>& teams, vector<Match>& fixtures) {
+    int totalTeams = teams.size();
+    int totalWeekends = (totalTeams - 1) * 2; // Each team plays every other team twice
 
 
 
