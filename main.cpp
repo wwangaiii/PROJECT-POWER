@@ -23,7 +23,8 @@ struct Match{ // structure of how the fixtures are going to be
 };
 void loadTeams(const string& filename, vector<Team>& teams) {
     ifstream file("Downloads/teams_csvFile - teams_csvFile.csv");// this is where the code reads data from the files
-    string line;
+
+ string line;
 
 
 
@@ -40,6 +41,22 @@ void loadTeams(const string& filename, vector<Team>& teams) {
 void generateFixtures(const vector<Team>& teams, vector<Match>& fixtures) {
     int totalTeams = teams.size();
     int totalWeekends = (totalTeams - 1) * 2; // Each team plays every other team twice
+//Create fixtures for each team
+for(int leg=1;i<=2;leg++)
+{for(int j=i+1;j<totalTeams;j++)
+{Match match;
+match.home=teams[i];
+match.away=teams[j];
+match.leg=leg;
+match.time=(rand()%2==0)?
+    "afternoon":"evening";
+match.weekend="weekend="+to_string((i+j+leg)%totalWeekends+1);
+match.day=(rand()%2==)?
+    "Saturday":"Sunday";
+fixtures.push_back(match);
+}
+}
+}
 
 
 
