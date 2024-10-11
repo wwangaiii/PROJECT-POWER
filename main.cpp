@@ -81,7 +81,7 @@ fixtures.push_back(match);
 }
 
 int main() {
-    srand (static_cast<unsigned>(time(0))); // Seed for random time generation
+
     vector<Team> teams;
     loadTeams ("teams_csvFile.csv",teams); //Load teams from CSV file 
     vector<Match> fixtures;
