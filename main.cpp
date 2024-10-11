@@ -21,6 +21,9 @@ struct Match{ // structure of how the fixtures are going to be
     string weekend; // "weekend #1", "weekend #2", and so on.
     string day;//Saturday or Sunday
 };
+void loadTeams(const string& filename, vector<Team>& teams) {
+    ifstream file("Downloads/teams_csvFile - teams_csvFile.csv");// this is where the code reads data from the files
+    string line;
 
 
 
