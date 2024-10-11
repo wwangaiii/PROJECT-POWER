@@ -51,7 +51,7 @@ match.home=teams[i];//setting the home teams as "i"
 match.away=teams[j];//setting away teams as "j"
 match.leg=leg;//assigning current leg(EITHER 1 OR 2)
 match.time=(rand()%2==0) ? "afternoon":"evening";;//randomly assigning the time
-match.weekend="weekend="+to_string((i+j+leg)%totalWeekends+1);
+match.weekend="weekend = "+to_string((i+j+leg)%totalWeekends+1);
 match.day=(rand()%2==) ? "Saturday":"Sunday";//randomly assigning the day
 fixtures.push_back(match);
 }
