@@ -57,6 +57,27 @@ fixtures.push_back(match);
 }
 }
 }
+ // Writing the fixtures to a CSV file
+    ofstream file("ABC.premier.league.fixtures.csv");
+    file << "Home Team,Away Team,Leg,Time,Weekend, Day\n";
+
+    for (const auto& match : fixtures) {
+        file << match.home.name << ", "
+             << match.away.name << ", "
+             << match.leg << ", "
+             << match.time << ", "
+             <<match.day << ", "
+             << match.weekend << "\n";
+
+        cout << match.home.name << " VS " << match.away.name
+             << "  |  Leg: " << match.leg
+             << "  |  Time: " << match.time
+             << "  |  " << match.weekend
+             << "  |  Day: "<<match.day << endl;
+    }
+
+    file.close();
+}
 
 
 
